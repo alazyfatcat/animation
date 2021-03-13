@@ -1,0 +1,133 @@
+.bounce {
+    width: 140px;
+    height: 140px;
+    border-radius:50%;
+    background: red;
+    animation: bounce, spin; 
+    animation-duration: 7s;
+    transform: translateY(10px);
+    animation-iteration-count: infinite;
+    position:absolute;
+    margin: 50px;
+}
+  
+.shadow{
+    height: 50px;
+    width: 140px;
+    border-radius:50%;
+    background: #000000;
+    animation-name: slidein;
+    animation-duration: 7s;
+    transform: translateY(10px);
+    animation-iteration-count: infinite;
+    margin: 700px 0 0 50px;
+}
+@keyframes spin {
+    99% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+@keyframes bounce {
+    /*top*/
+    0% {
+        top: 0;
+        left: 0px;
+		animation-timing-function: ease-in;
+    }
+    /*First landing*/
+    17% {
+        top: 550px;
+        left: 200px;
+        height: 100px; 
+        animation-timing-function: ease-out;
+    }
+    /* First bounce back*/
+    34%{
+        top: 150px;
+        left: 370px;
+        height: 140px; 
+        animation-timing-function: ease-in;
+        animation-duration: 50%;
+    }
+    /*Second landing*/
+    51%{
+        top: 540px;
+        left: 600px;
+        height: 110px; 
+        animation-timing-function: ease-out;
+    }
+    /* Third bounce back*/
+    68%{
+        top: 300px;
+        left: 750px;
+        height: 140px; 
+        animation-timing-function: ease-in;
+    }
+    /* Last landing*/
+    85%{
+        top: 520px;
+        left: 900px;
+        height: 140px; 
+        animation-timing-function: ease-in-out;
+    }  
+    100%{
+        top: 520px;
+        left: 1100px;
+        height: 140px; 
+        animation-timing-function: ease-in-out;
+    }  
+}
+ 
+@keyframes slidein {
+    
+    0%{
+        margin-left: 0 ;
+        opacity: 0.3;
+        animation-timing-function: ease-in;
+    }
+    /*First meet*/
+	17%{
+		height: 30px;
+        margin-left: 241px ;
+        opacity: 1;
+        animation-timing-function: ease-out;
+    }
+    /* First leave*/
+    34%{
+        height: 50px;
+        margin-left: 411px ;
+        opacity: 0.3;
+        animation-timing-function: ease-in;
+    }
+    /* Second meet*/
+    51%{
+        height: 30px;
+        margin-left: 641px ;
+        opacity: 1;
+        animation-timing-function: ease-out;
+    } 
+    /* Second leave*/
+    68%{
+        height: 50px;
+        margin-left: 791px ;
+        opacity: 0.3;
+        animation-timing-function: ease-in;
+    }
+    /* Last meet*/
+	85%{
+		height: 20px;
+        margin-left: 941px ;
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+    100%{
+		height: 20px;
+        margin-left: 1141px ;
+        opacity: 1;
+        animation-timing-function: ease-in;
+	}
+} 
+
